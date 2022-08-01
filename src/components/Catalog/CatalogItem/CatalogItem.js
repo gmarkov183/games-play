@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/alt-text */
-
+import { Link } from "react-router-dom";
 
 const CatalogItem = ({ game }) => {
   return(
@@ -9,12 +9,12 @@ const CatalogItem = ({ game }) => {
       <img src={game.imageUrl} />
       <h6>{game.category}</h6>
       <h2>{game.title}</h2>
-      <a href="#" className="details-button"> 
+      <Link to={`/catalog/${game._id}`} className="details-button"> 
         Details
-      </a>
+      </Link>
     </div>
   </div>
-  )
+  );
 };
 
 export default CatalogItem;
